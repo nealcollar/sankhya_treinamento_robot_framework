@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220728 20:42:24.384" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test">
+<suite id="s1-s1" name="Variaveis" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test\variaveis.robot">
+<test id="s1-s1-t1" name="Execicio 1 - imprimir dicionario com dados pessoais" line="5">
+<kw name="Tenho um dicionario com dados pessoais e imprimo ele" library="resource">
+<msg timestamp="20220728 20:42:24.422" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nImprimindo o dicionario pessoa: \n${Pessoa}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.422" level="TRACE">Arguments: [ '\nImprimindo o dicionario pessoa: \n{\'nome\': "\'Augusto\'", \'sobreNome\': "\'Vieira\'", \'idade\': "\'28\'", \'sexo\': "\'Masculino\'", \'cidade\': "\'Santana de Parnaiba\'", \'cep\': \'06540235\'}\n' ]</msg>
+<msg timestamp="20220728 20:42:24.423" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.422" endtime="20220728 20:42:24.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pegando somente o nome: ${Pessoa.nome}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.423" level="TRACE">Arguments: [ "Pegando somente o nome: 'Augusto'\n" ]</msg>
+<msg timestamp="20220728 20:42:24.423" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.423" endtime="20220728 20:42:24.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pegando somente o sobrenome: ${Pessoa.sobreNome}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.424" level="TRACE">Arguments: [ "Pegando somente o sobrenome: 'Vieira'\n" ]</msg>
+<msg timestamp="20220728 20:42:24.424" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.423" endtime="20220728 20:42:24.424"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pegando somente o idade: ${Pessoa.idade}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.425" level="TRACE">Arguments: [ "Pegando somente o idade: '28'\n" ]</msg>
+<msg timestamp="20220728 20:42:24.425" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.424" endtime="20220728 20:42:24.425"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pegando somente o cidade: ${Pessoa.cidade}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.425" level="TRACE">Arguments: [ "Pegando somente o cidade: 'Santana de Parnaiba'\n" ]</msg>
+<msg timestamp="20220728 20:42:24.425" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.425" endtime="20220728 20:42:24.425"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pegando somente o cep: ${Pessoa.cep}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.426" level="TRACE">Arguments: [ 'Pegando somente o cep: 06540235\n' ]</msg>
+<msg timestamp="20220728 20:42:24.426" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.426" endtime="20220728 20:42:24.427"/>
+</kw>
+<msg timestamp="20220728 20:42:24.427" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.422" endtime="20220728 20:42:24.427"/>
+</kw>
+<doc>teste para imprimir dicionario com dados</doc>
+<tag>dicionarios</tag>
+<status status="PASS" starttime="20220728 20:42:24.421" endtime="20220728 20:42:24.427"/>
+</test>
+<test id="s1-s1-t2" name="Execicio 2 - imprimir aminha lista de frutas" line="10">
+<kw name="Tenho uma lista de frutas e imprimo ela" library="resource">
+<msg timestamp="20220728 20:42:24.429" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nRecebendo a lista de frutas: \n${Lista_frutas}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.429" level="TRACE">Arguments: [ "\nRecebendo a lista de frutas: \n['mamao', 'banana', 'abacaxi', 'morango', 'laranja']\n" ]</msg>
+<msg timestamp="20220728 20:42:24.429" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.429" endtime="20220728 20:42:24.429"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nPrimeira fruta: \n${Lista_frutas[0]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.430" level="TRACE">Arguments: [ '\nPrimeira fruta: \nmamao\n' ]</msg>
+<msg timestamp="20220728 20:42:24.431" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.430" endtime="20220728 20:42:24.431"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nSegunda fruta: \n${Lista_frutas[1]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.432" level="TRACE">Arguments: [ '\nSegunda fruta: \nbanana\n' ]</msg>
+<msg timestamp="20220728 20:42:24.432" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.431" endtime="20220728 20:42:24.432"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nTerceira fruta: \n${Lista_frutas[2]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.433" level="TRACE">Arguments: [ '\nTerceira fruta: \nabacaxi\n' ]</msg>
+<msg timestamp="20220728 20:42:24.433" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.432" endtime="20220728 20:42:24.433"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nQuarto fruta: \n${Lista_frutas[3]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.434" level="TRACE">Arguments: [ '\nQuarto fruta: \nmorango\n' ]</msg>
+<msg timestamp="20220728 20:42:24.434" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.433" endtime="20220728 20:42:24.434"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nQuinto fruta: \n${Lista_frutas[4]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220728 20:42:24.435" level="TRACE">Arguments: [ '\nQuinto fruta: \nlaranja\n' ]</msg>
+<msg timestamp="20220728 20:42:24.435" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.434" endtime="20220728 20:42:24.435"/>
+</kw>
+<msg timestamp="20220728 20:42:24.435" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220728 20:42:24.429" endtime="20220728 20:42:24.435"/>
+</kw>
+<doc>teste para imprimir uma lista de frutas</doc>
+<tag>lista</tag>
+<status status="PASS" starttime="20220728 20:42:24.428" endtime="20220728 20:42:24.435"/>
+</test>
+<status status="PASS" starttime="20220728 20:42:24.411" endtime="20220728 20:42:24.436"/>
+</suite>
+<status status="PASS" starttime="20220728 20:42:24.385" endtime="20220728 20:42:24.437"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">dicionarios</stat>
+<stat pass="1" fail="0" skip="0">lista</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Variaveis">Test.Variaveis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
