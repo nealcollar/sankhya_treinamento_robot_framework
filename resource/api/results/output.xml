@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220803 20:40:18.958" rpa="false" schemaversion="3">
+<suite id="s1" name="Api Sankhya" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test\api_sankhya.robot">
+<test id="s1-t1" name="Criar um pedido" line="10">
+<kw name="Dado que eu estou logado" library="api_sankhya">
+<kw name="Dado que tem as configuracoes da requisicao" library="api_sankhya">
+<kw name="Get File" library="OperatingSystem">
+<var>${payload_string}</var>
+<arg>./resource/api/login.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20220803 20:40:19.283" level="INFO" html="true">Getting file '&lt;a href="file://C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\resource\api\login.json"&gt;C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\resource\api\login.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220803 20:40:19.283" level="INFO">${payload_string} = {
+    "serviceName": "MobileLoginSP.login",
+       "requestBody": {
+            "NOMUSU": {
+                "$": "sup"
+            },
+            "INTERNO":{
+               "$":"atacado"
+            }...</msg>
+<status status="PASS" starttime="20220803 20:40:19.283" endtime="20220803 20:40:19.283"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{params}</var>
+<arg>serviceName=MobileLoginSP.login</arg>
+<arg>outputType=json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220803 20:40:19.284" level="INFO">&amp;{params} = { serviceName=MobileLoginSP.login | outputType=json }</msg>
+<status status="PASS" starttime="20220803 20:40:19.283" endtime="20220803 20:40:19.284"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${end_point}</var>
+<arg>${url_base}${path_params.geral}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220803 20:40:19.285" level="INFO">${end_point} = https://atacadistriborclhd411.qa.sankhya.com.br/mge/service.sbr?</msg>
+<status status="PASS" starttime="20220803 20:40:19.284" endtime="20220803 20:40:19.285"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${payload}</arg>
+<arg>${payload_string}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220803 20:40:19.285" level="INFO">${payload} = {
+    "serviceName": "MobileLoginSP.login",
+       "requestBody": {
+            "NOMUSU": {
+                "$": "sup"
+            },
+            "INTERNO":{
+               "$":"atacado"
+            }...</msg>
+<status status="PASS" starttime="20220803 20:40:19.285" endtime="20220803 20:40:19.285"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>&amp;{params}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220803 20:40:19.286" level="INFO">&amp;{params} = { serviceName=MobileLoginSP.login | outputType=json }</msg>
+<status status="PASS" starttime="20220803 20:40:19.286" endtime="20220803 20:40:19.287"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${end_point}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220803 20:40:19.288" level="INFO">${end_point} = https://atacadistriborclhd411.qa.sankhya.com.br/mge/service.sbr?</msg>
+<status status="PASS" starttime="20220803 20:40:19.287" endtime="20220803 20:40:19.288"/>
+</kw>
+<status status="PASS" starttime="20220803 20:40:19.282" endtime="20220803 20:40:19.289"/>
+</kw>
+<kw name="Quando envio esta requisicao de login" library="api_sankhya">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=${end_point}</arg>
+<arg>params=&amp;{params}</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220803 20:40:19.389" level="INFO">POST Request : url=https://atacadistriborclhd411.qa.sankhya.com.br/mge/service.sbr?serviceName=MobileLoginSP.login&amp;outputType=json 
+ path_url=/mge/service.sbr?serviceName=MobileLoginSP.login&amp;outputType=json 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '294'} 
+ body={
+    "serviceName": "MobileLoginSP.login",
+       "requestBody": {
+            "NOMUSU": {
+                "$": "sup"
+            },
+            "INTERNO":{
+               "$":"atacado"
+            },
+           "KEEPCONNECTED": {
+               "$": "S"
+             
+           }
+       }
+ } 
+ </msg>
+<msg timestamp="20220803 20:40:19.389" level="INFO">POST Response : url=https://atacadistriborclhd411.qa.sankhya.com.br/mge/service.sbr?serviceName=MobileLoginSP.login&amp;outputType=json 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 03 Aug 2022 23:40:19 GMT', 'Content-Type': 'application/json;charset=ISO-8859-1', 'Content-Length': '340', 'Connection': 'keep-alive', 'Expires': 'Wed, 03 Aug 2022 23:40:19 GMT', 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Set-Cookie': 'JSESSIONID=gf-h3FzgXNvj57jQNrhohMafBCGpseWY76-Y5v_U.atacadistriborclhd411-sankhya-w-648dc68574-njznr; path=/mge', 'Pragma': 'no-cache', 'worker-thread': 'default task-34', 'x-elapsed-time': '30', 'max-age': 'Thu, 01 Jan 1970 00:00:00 GMT', 'X-Robots-Tag': 'noindex', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains', 'X-Forwarded-Proto': 'https', 'Content-Security-Policy': 'upgrade-insecure-requests'} 
+ body={"serviceName":"MobileLoginSP.login","status":"1","pendingPrinting":"false","transactionId":"840E246A156D26365DECB3270F25041C","responseBody":{"callID":{"$":"17551CE5FA7A55AA163B2C58135C462B"},"jsessionid":{"$":"gf-h3FzgXNvj57jQNrhohMafBCGpseWY76-Y5v_U"},"kID":{"$":"MkZDQTNBNDhDNUQzNEQzNEI3OTA2NzZEMTVFOEQ4Mjk=\n"},"idusu":{"$":"MA==\n"}}} 
+ </msg>
+<msg timestamp="20220803 20:40:19.389" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220803 20:40:19.289" endtime="20220803 20:40:19.389"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220803 20:40:19.389" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220803 20:40:19.389" endtime="20220803 20:40:19.390"/>
+</kw>
+<status status="PASS" starttime="20220803 20:40:19.289" endtime="20220803 20:40:19.390"/>
+</kw>
+<kw name="Adcionar parametro jsseion" library="api_sankhya">
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.json()}[responseBody][jsessionid]['$']</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220803 20:40:40.004" level="FAIL">Dictionary '${response.json()}[responseBody][jsessionid]' has no key ''$''.</msg>
+<status status="FAIL" starttime="20220803 20:40:40.001" endtime="20220803 20:40:40.005"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.json()}[responseBody][jsessionid]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220803 20:40:43.453" endtime="20220803 20:40:43.454"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220803 20:40:54.957" endtime="20220803 20:40:54.958"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<msg timestamp="20220803 20:41:21.560" level="FAIL">TypeError: Expected argument 1 to be a dictionary or dictionary-like, got string instead.</msg>
+<status status="FAIL" starttime="20220803 20:41:21.558" endtime="20220803 20:41:21.560"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>mgeSession=${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<msg timestamp="20220803 20:41:46.192" level="FAIL">Keyword 'Collections.Set To Dictionary' expected at least 1 non-named argument, got 0.</msg>
+<status status="FAIL" starttime="20220803 20:41:46.191" endtime="20220803 20:41:46.192"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>&amp;{params}</arg>
+<arg>mgeSession=${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<msg timestamp="20220803 20:42:46.958" level="FAIL">Keyword 'Collections.Set To Dictionary' expected at least 1 non-named argument, got 0.</msg>
+<status status="FAIL" starttime="20220803 20:42:46.957" endtime="20220803 20:42:46.958"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>&amp;{params}</arg>
+<arg>mgeSession=${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<msg timestamp="20220803 20:42:58.936" level="FAIL">Keyword 'Collections.Set To Dictionary' expected at least 1 non-named argument, got 0.</msg>
+<status status="FAIL" starttime="20220803 20:42:58.934" endtime="20220803 20:42:58.937"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${params}</arg>
+<arg>mgeSession=${response.json()}[responseBody][jsessionid][$]</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20220803 20:43:11.742" endtime="20220803 20:43:11.743"/>
+</kw>
+<kw name="">
+<msg timestamp="20220803 20:43:34.588" level="FAIL">No keyword with name '' found.</msg>
+<status status="FAIL" starttime="20220803 20:43:34.587" endtime="20220803 20:43:34.588"/>
+</kw>
+<kw name="">
+<msg timestamp="20220803 20:43:35.969" level="FAIL">No keyword with name '' found.</msg>
+<status status="FAIL" starttime="20220803 20:43:35.968" endtime="20220803 20:43:35.969"/>
+</kw>
+<kw name="">
+<msg timestamp="20220803 20:43:40.890" level="FAIL">No keyword with name '' found.</msg>
+<status status="FAIL" starttime="20220803 20:43:40.890" endtime="20220803 20:43:40.890"/>
+</kw>
+<status status="PASS" starttime="20220803 20:40:19.390" endtime="20220803 20:43:47.208"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<var>&amp;{params}</var>
+<arg>${response.json()}[responseBody][jsessionid]['$']</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<msg timestamp="20220803 20:43:47.209" level="FAIL">Dictionary '${response.json()}[responseBody][jsessionid]' has no key ''$''.</msg>
+<status status="FAIL" starttime="20220803 20:43:47.208" endtime="20220803 20:43:47.209"/>
+</kw>
+<status status="FAIL" starttime="20220803 20:40:19.390" endtime="20220803 20:43:47.210"/>
+</kw>
+<status status="FAIL" starttime="20220803 20:40:19.281" endtime="20220803 20:43:47.211"/>
+</kw>
+<kw name="Quando crio um pedido" library="api_sankhya">
+<status status="NOT RUN" starttime="20220803 20:43:47.212" endtime="20220803 20:43:47.212"/>
+</kw>
+<kw name="Entao valido meu pedido" library="api_sankhya">
+<status status="NOT RUN" starttime="20220803 20:43:47.213" endtime="20220803 20:43:47.213"/>
+</kw>
+<status status="FAIL" starttime="20220803 20:40:19.280" endtime="20220803 20:43:47.213">Dictionary '${response.json()}[responseBody][jsessionid]' has no key ''$''.</status>
+</test>
+<status status="FAIL" starttime="20220803 20:40:18.961" endtime="20220803 20:43:47.215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Api Sankhya">Api Sankhya</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

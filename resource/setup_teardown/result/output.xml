@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220801 19:49:22.361" rpa="false" schemaversion="3">
+<suite id="s1" name="Setup Teardown" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test\setup_teardown.robot">
+<kw name="setup da minha suite de teste" library="resource" type="SETUP">
+<msg timestamp="20220801 19:49:22.399" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou executando minha funcao ANTES da suite de teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.400" level="TRACE">Arguments: [ '\n\n Estou executando minha funcao ANTES da suite de teste \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.400" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.400" endtime="20220801 19:49:22.400"/>
+</kw>
+<msg timestamp="20220801 19:49:22.401" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.399" endtime="20220801 19:49:22.401"/>
+</kw>
+<test id="s1-t1" name="cenario de login SankhyaOM" line="10">
+<kw name="setup default de teste" library="resource" type="SETUP">
+<msg timestamp="20220801 19:49:22.402" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Setup DEFAULT \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.402" level="TRACE">Arguments: [ '\n\n Setup DEFAULT \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.403" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.402" endtime="20220801 19:49:22.403"/>
+</kw>
+<msg timestamp="20220801 19:49:22.403" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.401" endtime="20220801 19:49:22.403"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou dentro do meu teste 1 \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.404" level="TRACE">Arguments: [ '\n\n Estou dentro do meu teste 1 \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.406" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.404" endtime="20220801 19:49:22.406"/>
+</kw>
+<kw name="keyword 1" library="resource">
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Arguments: [  ]</msg>
+<kw name="keyword2" library="resource">
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>ola mundo</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Arguments: [ 'ola mundo' ]</msg>
+<msg timestamp="20220801 19:49:22.407" level="INFO">ola mundo</msg>
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.407" endtime="20220801 19:49:22.407"/>
+</kw>
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.407" endtime="20220801 19:49:22.407"/>
+</kw>
+<msg timestamp="20220801 19:49:22.407" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.406" endtime="20220801 19:49:22.408"/>
+</kw>
+<kw name="teardwon dos meus testes" library="resource" type="TEARDOWN">
+<msg timestamp="20220801 19:49:22.408" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou executando minha funcao DEPOIS da execucao do meu teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.409" level="TRACE">Arguments: [ '\n\n Estou executando minha funcao DEPOIS da execucao do meu teste \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.410" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.409" endtime="20220801 19:49:22.410"/>
+</kw>
+<msg timestamp="20220801 19:49:22.410" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.408" endtime="20220801 19:49:22.410"/>
+</kw>
+<status status="PASS" starttime="20220801 19:49:22.401" endtime="20220801 19:49:22.411"/>
+</test>
+<test id="s1-t2" name="cenario de compra dentro do SankhyaOM" line="16">
+<kw name="setup dos meus testes" library="resource" type="SETUP">
+<msg timestamp="20220801 19:49:22.414" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou executando minha funcao ANTES da execucao do meu teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.414" level="TRACE">Arguments: [ '\n\n Estou executando minha funcao ANTES da execucao do meu teste \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.415" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.414" endtime="20220801 19:49:22.415"/>
+</kw>
+<msg timestamp="20220801 19:49:22.416" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.413" endtime="20220801 19:49:22.416"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou dentro do meu teste 2 \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.416" level="TRACE">Arguments: [ '\n\n Estou dentro do meu teste 2 \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.418" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.416" endtime="20220801 19:49:22.418"/>
+</kw>
+<kw name="teardwon dos meus testes" library="resource" type="TEARDOWN">
+<msg timestamp="20220801 19:49:22.419" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou executando minha funcao DEPOIS da execucao do meu teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.420" level="TRACE">Arguments: [ '\n\n Estou executando minha funcao DEPOIS da execucao do meu teste \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.422" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.420" endtime="20220801 19:49:22.422"/>
+</kw>
+<msg timestamp="20220801 19:49:22.422" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.419" endtime="20220801 19:49:22.422"/>
+</kw>
+<status status="PASS" starttime="20220801 19:49:22.412" endtime="20220801 19:49:22.423"/>
+</test>
+<kw name="teardown da minha suite de teste" library="resource" type="TEARDOWN">
+<msg timestamp="20220801 19:49:22.425" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Estou executando minha funcao DEPOIS da suite de teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220801 19:49:22.426" level="TRACE">Arguments: [ '\n\n Estou executando minha funcao DEPOIS da suite de teste \n\n' ]</msg>
+<msg timestamp="20220801 19:49:22.427" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.425" endtime="20220801 19:49:22.427"/>
+</kw>
+<msg timestamp="20220801 19:49:22.427" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220801 19:49:22.425" endtime="20220801 19:49:22.427"/>
+</kw>
+<status status="PASS" starttime="20220801 19:49:22.363" endtime="20220801 19:49:22.427"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Setup Teardown">Setup Teardown</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

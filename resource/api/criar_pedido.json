@@ -1,0 +1,81 @@
+{
+	"serviceName": "CACSP.incluirNota",
+	"requestBody": {
+		"nota": {
+			"cabecalho": {
+				"NUNOTA": {},
+				"CODPARC": {
+					"$": "700"
+				},
+				"DTNEG": {
+					"$": "03/08/2022"
+				},
+				"CODTIPOPER": {
+					"$": "2000"
+				},
+				"CODTIPVENDA": {
+					"$": "200"
+				},
+				"CODVEND": {
+					"$": ""
+				},
+				"CODEMP": {
+					"$": "1"
+				},
+		
+				"TIPMOV": {
+					"$": "P"
+				},
+				"CODNAT": {
+					"$": "1010000"
+				},
+				"CODCENCUS": {
+					"$": "10200"
+				}
+			},
+			"itens": {
+				"INFORMARPRECO": "False",
+				"item": [
+                    {
+                     	"NUNOTA": {},
+						"CODPROD": {
+							"$": "501"
+						},
+						"QTDNEG": {
+							"$": "6"
+						},
+						"CODLOCALORIG": {
+							"$": "6100"
+						},
+                         "CONTROLE":{
+                            "$":"HORTELA"
+                        },
+						"CODVOL": {
+							"$": "UN"
+						}   
+                    },
+                    {
+                     	"NUNOTA": {},
+						"CODPROD": {
+							"$": "500"
+						},
+						"QTDNEG": {
+							"$": "7"
+						},
+						"CODLOCALORIG": {
+							"$": "6100"
+						},
+                         "CONTROLE":{
+                            "$":"0501"
+                        },
+						"CODVOL": {
+							"$": "UN"
+						}   
+
+
+                    }
+				]
+			}
+		}
+	}
+}
