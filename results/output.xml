@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220804 20:34:16.590" rpa="false" schemaversion="3">
+<suite id="s1" name="Sankhya Treinamento Robot Framework" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework">
+<suite id="s1-s1" name="Test" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test">
+<suite id="s1-s1-s1" name="Web" source="C:\Projects\Sankhya\treinamento_robot\sankhya_treinamento_robot_framework\test\web.robot">
+<test id="s1-s1-s1-t1" name="Amamos a Sankhya ERP e faremos o login nela" line="31">
+<kw name="Dado que estou com o navegador aberto na pagina da Sankhya">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=headlesschrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 20:34:16.903" level="INFO">Opening browser 'headlesschrome' to base url 'https://atacadistriborclhd411.qa.sankhya.com.br/'.</msg>
+<status status="PASS" starttime="20220804 20:34:16.902" endtime="20220804 20:34:18.760"/>
+</kw>
+<status status="PASS" starttime="20220804 20:34:16.887" endtime="20220804 20:34:18.760"/>
+</kw>
+<kw name="Quando realizo o login no ERP">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${campo_usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 20:34:18.761" endtime="20220804 20:34:18.784"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_usuario}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 20:34:18.785" level="INFO">Typing text 'sup' into text field 'css:#login'.</msg>
+<status status="PASS" starttime="20220804 20:34:18.784" endtime="20220804 20:34:18.834"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${campo_password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 20:34:18.834" endtime="20220804 20:34:18.855"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_password}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 20:34:18.856" level="INFO">Typing text 'atacado' into text field 'password'.</msg>
+<status status="PASS" starttime="20220804 20:34:18.855" endtime="20220804 20:34:18.919"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botao_logar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 20:34:18.919" endtime="20220804 20:34:18.937"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botao_logar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220804 20:34:18.937" level="INFO">Clicking button '//button[text()="Entrar" and @class="btn-login"]'.</msg>
+<status status="PASS" starttime="20220804 20:34:18.937" endtime="20220804 20:34:18.988"/>
+</kw>
+<status status="PASS" starttime="20220804 20:34:18.761" endtime="20220804 20:34:18.988"/>
+</kw>
+<kw name="Entao valido que estou logado">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${wallpaper}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220804 20:34:18.990" endtime="20220804 20:34:41.184"/>
+</kw>
+<status status="PASS" starttime="20220804 20:34:18.989" endtime="20220804 20:34:41.184"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 20:34:41.184" endtime="20220804 20:34:43.296"/>
+</kw>
+<status status="PASS" starttime="20220804 20:34:16.885" endtime="20220804 20:34:43.296"/>
+</test>
+<status status="PASS" starttime="20220804 20:34:16.649" endtime="20220804 20:34:43.299"/>
+</suite>
+<status status="PASS" starttime="20220804 20:34:16.643" endtime="20220804 20:34:43.301"/>
+</suite>
+<status status="PASS" starttime="20220804 20:34:16.599" endtime="20220804 20:34:43.302"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Web">Sankhya Treinamento Robot Framework.Test.Web</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
